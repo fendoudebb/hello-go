@@ -40,10 +40,11 @@ func main() {
 
 	fmt.Println(show)
 
-	fmt.Println("已设置的标识：", flag.NFlag())
+	fmt.Println("预设的flag的参数个数：", flag.NFlag())
 
 	// go run api_flag.go hello world test1 test2
-	fmt.Println(flag.Args()) // [hello world test1 test2]
+	fmt.Println("非预设的flag的参数：", flag.Args()) // [hello world test1 test2]
 	fmt.Println(flag.Arg(0)) // hello
-	fmt.Println("已识别的参数: ", flag.NArg())
+	fmt.Println("非预设的flag的参数个数：", flag.NArg())
+
 }
