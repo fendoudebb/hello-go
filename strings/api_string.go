@@ -63,4 +63,6 @@ func main() {
 
 	fmt.Println("以~拼接字符串数组：", strings.Join([]string{"a", "b", "c","d"},"~"))
 
+	validUTF8Str2 := strings.ToValidUTF8("posic\xefo", "")
+	fmt.Println("转换成合法的UTF8字符串（去除不合法的字符）：", validUTF8Str2)
 }
