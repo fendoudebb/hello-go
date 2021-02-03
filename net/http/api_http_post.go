@@ -2,7 +2,9 @@ package main
 
 import (
 	"fmt"
+	"net/http"
 	"net/url"
+	"strings"
 )
 
 func main() {
@@ -18,5 +20,11 @@ func main() {
 
 	encode := v.Encode()
 	fmt.Println(encode)
+
+	response, err := http.Post("http://www.baidu.com", "application/json", strings.NewReader("aaaa"))
+
+	if err != nil && response !=nil {
+		println(response.StatusCode)
+	}
 
 }
